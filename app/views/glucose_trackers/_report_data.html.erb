@@ -1,0 +1,20 @@
+<table class = "table table-bordered">
+  <thead>
+  <tr>
+    <th>Value</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Risk</th>
+  </tr>
+</thead>
+<tbody>
+    <% @glucose_units.each do |f| %>
+      <tr>
+        <td><%= f.unit %></td>
+        <td><%= f.created_at.strftime("%d/%m/%Y")%></td>
+        <td><%= f.created_at.strftime("%H:%M:%S %p")%></td>
+        <td><%= raw calculate_risk(f.unit)%></td>
+      </tr>
+    <%end%>
+</tbody>
+</table>

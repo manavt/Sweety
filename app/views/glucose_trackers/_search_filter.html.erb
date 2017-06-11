@@ -1,0 +1,17 @@
+<div class="container-fluid well">
+  <div class="form-inline">
+    <%= form_tag('/glucose_trackers/search_record.js', :remote => true) do %>
+     <%= fields_for :glucose_unit do | f |%>
+     <div class="form-group input-lg">
+       <%= f.select :report_type, options_for_select(["Daily report", "Month to date report", "Monthly report"], "Daily report" )%>
+     </div>
+      <div class="form-group dropdown">
+        <%= f.text_field :to_date, :placeholder => "Select end date", :class=> "form-control input-sm"%>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Search", :class => "btn btn-primary input-sm"%>
+      </div>
+      <%end%>
+    <%end%>
+  </div>
+</div>

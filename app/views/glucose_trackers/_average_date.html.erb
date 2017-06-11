@@ -1,0 +1,34 @@
+<% max_reading,min_reading,avg_reading = calc_reading(@glucose_units)%>
+<div class="col-xs-4 col-lg-4">
+  <!-- col-md-6 -->
+  <div class="thumbnail">
+    <div class="container-fluid well">
+      <div class="form-inline">
+        <%= "Maximum reading" %>
+      </div>
+    </div>
+    <p align="center"><%= max_reading %></p>
+  </div>
+</div>
+
+<div class="item  col-xs-4 col-lg-4">
+  <div class="thumbnail">
+    <div class="container-fluid well">
+      <div class="form-inline">
+        <%= "Minimum reading" %>
+      </div>
+    </div>
+    <p align="center"><%= min_reading %></p>
+  </div>
+</div>
+
+<div class="item  col-xs-4 col-lg-4">
+  <div class="thumbnail">
+    <div class="container-fluid well">
+      <div class="form-inline">
+        <%= "Average reading" %>
+      </div>
+    </div>
+    <p align="center"><%= avg_reading %></p>
+  </div>
+</div>

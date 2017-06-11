@@ -1,3 +1,21 @@
 // Place all the styles related to the glucose_trackers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.hidden{
+  display: none;
+}
+.pull-right {
+  float: right;
+}
+
+.footer{
+  background: #333;
+  height:40px;
+  margin-top:-40px;
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+}

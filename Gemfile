@@ -11,8 +11,21 @@ gem 'rails', '~> 5.1.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
 gem 'devise'
+gem 'jquery-datatables-rails', '~> 3.4.0'
+gem 'jquery-ui-rails'
+gem 'puma', '~> 3.7'
+gem 'autoprefixer-rails'
+gem 'responders'
+gem 'bootstrap-sass'
+gem 'bootstrap3-datetimepicker-rails'
+gem 'factory_girl_rails'
+gem 'jquery-rails'
+gem 'momentjs-rails'
+gem 'faker'
+gem 'rspec-rails'
+gem 'rails-controller-testing'
+gem 'rubocop', '~> 0.49.1', require: false
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

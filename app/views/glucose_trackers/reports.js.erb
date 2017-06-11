@@ -1,0 +1,5 @@
+$("#items_grid1").html("<%= escape_javascript(render partial: 'search_filter') %>");
+$("#items_grid2").html("<%= escape_javascript(render partial: 'report_data', object: @glucose_units ) %>");
+$("#items_grid3").html("<%= escape_javascript(render partial: 'average_date', object: @glucose_units ) %>");
+$('#glucose_unit_to_date').datepicker({ dateFormat: 'yy-mm-dd' });
+$('.table').DataTable({})

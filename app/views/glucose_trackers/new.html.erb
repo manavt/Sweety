@@ -1,2 +1,27 @@
-<h1>GlucoseTrackers#new</h1>
-<p>Find me in app/views/glucose_trackers/new.html.erb</p>
+<div class="container-fluid well">
+  <div class="form-horizontal">
+    <%= form_tag('/glucose_trackers') do %>
+    <%= fields_for :glucose_unit do | f |%>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="value">Value:</label>
+      <div class="col-sm-3">
+        <%= f.text_field :unit, :placeholder => "Value (mg/dL)", :class => "form-control"%>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="date">Date:</label>
+      <div class="col-sm-3">
+        <%= f.text_field :created_at, :placeholder => "Select date", :class=> "form-control"%>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="time"></label>
+      <div class="col-sm-3">
+          <%= f.submit "Save", :class=> "btn btn-primary input-sm"%>
+          <%= link_to "Cancel", glucose_trackers_path, method: :get, :class=> "btn btn-primary input-sm refresh"%>
+      </div>
+    </div>
+    <%end%>
+    <%end%>
+  </div>
+</div>

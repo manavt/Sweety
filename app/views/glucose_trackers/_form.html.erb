@@ -1,0 +1,21 @@
+<div class="container-fluid well">
+  <div class="form-inline">
+    <%= form_tag('/glucose_trackers') do %>
+     <%= fields_for :glucose_unit do | f |%>
+      <div class="form-group">
+        <%= f.text_field :unit, :placeholder => "Value (mg/dL)", class: "form-control input-sm"%>
+      </div>
+      <div class="form-group dropdown">
+        <%= f.text_field :created_at, :placeholder => "Select date", :class=> "form-control input-sm"%>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Quick Add", :class => "btn btn-primary input-sm"%>
+      </div>
+      <div class="form-group pull-right">
+        <%= link_to "+New Glucose", new_glucose_tracker_path, method: :get , :class=> "form-control input-sm refresh"%>
+        <%= link_to "+Reports", "/glucose_trackers/reports", method: :get , :class=> "form-control input-sm refresh"%>
+      </div>
+      <%end%>
+    <%end%>
+  </div>
+</div>
