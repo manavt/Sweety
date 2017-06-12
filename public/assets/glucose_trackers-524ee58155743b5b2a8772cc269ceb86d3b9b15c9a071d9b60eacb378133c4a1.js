@@ -1,1 +1,0 @@
-(function(){$(document).ready(function(){$("#glucose_unit_created_at").datetimepicker({format:"YYYY-MM-DD HH:mm"}),$("#glucose_unit_to_date").datepicker({dateFormat:"yy-mm-dd"}),$(".table").DataTable({})})}).call(this);
